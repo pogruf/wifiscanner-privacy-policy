@@ -1,43 +1,43 @@
-# Политика конфиденциальности приложения "Wi-Fi Scanner"
+# Privacy Policy for "Wi-Fi Scanner"
 
-**Дата вступления в силу:** 13 августа 2026 года
+**Effective Date:** August 13, 2026
 
-Настоящая Политика конфиденциальности описывает, как наше мобильное приложение "Wi-Fi Scanner" (далее — «Приложение») обрабатывает информацию пользователей. Приложение разработано как локальный инструмент для аудита беспроводных сетей и сетевой безопасности.
+This Privacy Policy describes how the "Wi-Fi Scanner" mobile application (hereinafter referred to as the "Application") handles user information. The Application is designed as a local tool for wireless network auditing and network security analysis.
 
-Мы уважаем вашу конфиденциальность и **НЕ собираем, НЕ передаем и НЕ храним** ваши личные данные на внешних серверах.
-
----
-
-## 1. Какие разрешения запрашивает Приложение и зачем
-
-Для выполнения своих функций Приложению требуются следующие системные разрешения Android:
-
-*   **Доступ к геолокации (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`):** Требуется операционной системой Android для легального сканирования радиоэфира (получения SSID и BSSID окружающих Wi-Fi сетей). Без этого разрешения Android блокирует доступ к Wi-Fi API. Приложение **не отслеживает** ваши физические координаты.
-*   **Уведомления (`POST_NOTIFICATIONS`):** Используется на Android 13+ для отправки локальных системных уведомлений (например, предупреждений об обнаружении сетевых угроз или завершении сканирования).
-*   **Доступ к сети и Wi-Fi:** Требуется для отправки ICMP-запросов (Ping), проверки TCP/UDP портов в вашей локальной подсети и чтения таблицы соседей (Netlink/ARP).
+We value your privacy and **DO NOT collect, transmit, or store** your personal or network data on any external servers.
 
 ---
 
-## 2. Сбор, хранение и передача данных
+## 1. Permissions Requested and Their Purpose
 
-*   **Локальное хранение:** Все результаты сканирования (история подключений, списки обнаруженных устройств, их IP и MAC-адреса, открытые порты) сохраняются исключительно в локальной базе данных SQLite на вашем устройстве (`DbHelper`).
-*   **Отсутствие серверной части:** У Приложения нет удаленного сервера. Мы не собираем аналитику и не передаем ваши сетевые данные третьим лицам.
-*   **Удаление данных:** Вы можете в любой момент полностью очистить историю сканирования, удалив данные Приложения в системных настройках Android или удалив само Приложение.
+To perform its functions, the Application requires the following Android system permissions:
 
----
-
-## 3. Безопасность
-
-Поскольку все операции выполняются локально на вашем устройстве, безопасность данных зависит от безопасности самого устройства. Мы используем стандартные защищенные системные API Android (Java 17 / Android SDK) для взаимодействия с сетевым стеком ядра.
+*   **Access to Location (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`):** Required by the Android operating system to legally scan the radio spectrum (retrieving SSIDs and BSSIDs of surrounding Wi-Fi networks). Without this permission, Android blocks access to the Wi-Fi scanning APIs. The Application **does not** track or record your actual physical coordinates.
+*   **Notifications (`POST_NOTIFICATIONS`):** Used on Android 13+ to deliver local system notifications (e.g., warnings about detected network threats or scan completion events).
+*   **Network and Wi-Fi Access:** Required to send ICMP requests (Ping), check TCP/UDP ports within your local subnet, and read the network neighbor cache (Netlink/ARP).
 
 ---
 
-## 4. Изменения в Политике конфиденциальности
+## 2. Data Collection, Storage, and Transfer
 
-Мы можем периодически обновлять эту Политику при добавлении нового функционала. Все изменения будут публиковаться на этой странице GitHub с обновлением даты вступления в силу.
+*   **Local Storage Only:** All scan results (connection history, lists of discovered devices, their IP/MAC addresses, and open ports) are saved exclusively within a local SQLite database (`DbHelper`) on your device.
+*   **No Backend Server:** The Application does not use any remote servers. We do not collect telemetric analytics, and we do not share your network data with any third parties.
+*   **Data Deletion:** You can completely clear your scan history at any time by clearing the Application's storage in the Android system settings or by uninstalling the Application.
 
 ---
 
-## 5. Контакты
+## 3. Data Security
 
-Если у вас есть вопросы по работе Приложения или данной Политике, вы можете открыть Issue в данном репозитории GitHub.
+Because all operations are performed locally on your device, the security of your data depends on the security of the device itself. We use standard, secure system APIs (Java 17 / Android SDK) to interact with the Linux kernel network stack.
+
+---
+
+## 4. Changes to This Privacy Policy
+
+We may periodically update this Privacy Policy as new features are added. All changes will be published on this GitHub page with an updated effective date.
+
+---
+
+## 5. Contact Information
+
+If you have any questions regarding the Application or this Policy, you can open an Issue in this GitHub repository.
